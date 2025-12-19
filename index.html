@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Token Faucet</title>
+</head>
+<body>
+
+<h2>Token Faucet</h2>
+
+<button onclick="connect()">Connect Wallet</button>
+<p id="addr"></p>
+
+<button onclick="claim()">Request Tokens</button>
+
+<script type="module">
+  import "./src/utils/eval.js";
+
+  async function connect() {
+    const addr = await window.EVAL.connectWallet();
+    document.getElementById("addr").innerText = "Connected: " + addr;
+  }
+
+  async function claim() {
+    const tx = await window.EVAL.requestTokens();
+    alert("Tokens claimed! Tx: " + tx);
+  }
+
+  window.connect = connect;
+  window.claim = claim;
+</script>
+
+</body>
+</html>
