@@ -15,6 +15,7 @@ The application consists of:
 ---
 
 ## 2. Architecture
+![Architecture](screenshots/architecture.png)
 
 ### Smart Contracts
 - **YourToken.sol**
