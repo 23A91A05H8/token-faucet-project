@@ -2,8 +2,8 @@ import { Contract } from "https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers
 import { getSigner, getProvider } from "./wallet.js";
 
 // 👇 paste addresses from deployed-addresses.json
-const TOKEN_ADDRESS = "PASTE_YOUR_TOKEN_ADDRESS";
-const FAUCET_ADDRESS = "PASTE_YOUR_FAUCET_ADDRESS";
+const TOKEN_ADDRESS = import.meta.env.VITE_TOKEN_ADDRESS;
+const FAUCET_ADDRESS = import.meta.env.VITE_FAUCET_ADDRESS;
 
 // 👇 minimal ABIs
 const tokenABI = [
